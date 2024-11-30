@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap");
+
+:root {
+  --cerulean-blue: #98b4d4;
+  --blue-izis: #5b5ea6;
+}
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  all: unset;
+  list-style-type: none;
+}
+.nav-bar {
+  background-color: var(--cerulean-blue);
+  font-family: Jaro;
+  font-size: 1.5rem;
+}
+.nav-bar-container {
+  display: flex;
+  justify-content: center;
+  min-height: 6rem;
+}
+.nav-bar-container ul {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin: minmax(1rem, 3rem);
+  gap: 5rem;
+}
+.nav-bar-container ul li {
+  min-width: 0.4rem;
+  padding: 0 1rem;
+  transition: transform 0.05s ease-in;
+}
+.nav-bar-container ul li:hover {
+  color: var(--blue-izis);
+  cursor: pointer;
+  background-color: beige;
+  transform: scale(1.3);
+}
