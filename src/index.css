@@ -9,14 +9,19 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-image: url(./svg/slanted-gradient.svg);
+  background-size: cover;
+  background-position: center;
+  font-family: Jaro;
+}
+a {
+  all: unset;
 }
 ul {
   all: unset;
   list-style-type: none;
 }
 .nav-bar {
-  background-color: var(--cerulean-blue);
-  font-family: Jaro;
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
@@ -59,4 +64,40 @@ ul {
 .shopping-cart svg:hover {
   color: var(--blue-izis);
   cursor: pointer;
+}
+main {
+  padding-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-header {
+  display: flex;
+  font-size: 3.3rem;
+}
+.button-section h2 {
+  font-size: 3rem;
+}
+.button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button-section a {
+  all: unset;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  min-height: 150px;
+  background: linear-gradient(
+    162deg,
+    rgba(152, 180, 212, 1) 0%,
+    rgba(91, 94, 166, 1) 100%
+  );
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+
+  border-radius: 1rem;
 }

@@ -5,7 +5,7 @@ export function NavBar() {
         <ul>
           <li>
             <div className="nav-bar-logo">
-              <p>Shoppy</p>
+              <p>Shooppy</p>
             </div>
           </li>
           <li>
