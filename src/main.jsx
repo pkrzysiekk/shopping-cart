@@ -8,11 +8,16 @@ import {
 
 import "./index.css";
 import App from "./App.jsx";
+import ShopPage from "./components/ShopPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/shop",
+    element: <ShopPage />,
   },
 ]);
 createRoot(document.getElementById("root")).render(

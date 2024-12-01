@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function NavBar() {
   return (
     <div className="nav-bar">
@@ -5,17 +7,23 @@ export function NavBar() {
         <ul>
           <li>
             <div className="nav-bar-logo">
-              <p>Shooppy</p>
+              <p>
+                <Link to="/">Shooppy</Link>
+              </p>
             </div>
           </li>
           <li>
             <div className="nav-bar-home">
-              <p>Home</p>
+              <p>
+                <Link to="/">Home</Link>
+              </p>
             </div>
           </li>
           <li>
             <div className="nav-bar-shop">
-              <p>Online Shop</p>
+              <p>
+                <Link to="/shop">Online Shop</Link>
+              </p>
             </div>
           </li>
         </ul>

@@ -15,7 +15,7 @@ function App() {
         <div className="button-section">
           <h2> Explore our offers now!</h2>
 
-          <Link to="/">Online shop</Link>
+          <Link to="/shop">Online shop</Link>
         </div>
       </main>
     </>

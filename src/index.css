@@ -4,6 +4,7 @@
   --cerulean-blue: #98b4d4;
   --blue-izis: #5b5ea6;
 }
+
 body {
   box-sizing: border-box;
   height: 100vh;
@@ -32,6 +33,7 @@ ul {
   min-height: 6rem;
   flex: 1;
 }
+
 .nav-bar-container ul {
   display: flex;
   flex-direction: row;
@@ -43,6 +45,7 @@ ul {
   min-width: 0.4rem;
   padding: 0 1rem;
   transition: transform 0.05s ease-in;
+  display: flex;
 }
 .nav-bar-container ul li:hover {
   color: var(--blue-izis);
@@ -62,11 +65,11 @@ ul {
   color: black;
 }
 .shopping-cart svg:hover {
-  color: var(--blue-izis);
   cursor: pointer;
+  color: var(--blue-izis);
 }
 main {
-  padding-top: 2%;
+  padding-top: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,11 +96,20 @@ main {
   min-width: 250px;
   min-height: 150px;
   background: linear-gradient(
-    162deg,
+    to top,
     rgba(152, 180, 212, 1) 0%,
     rgba(91, 94, 166, 1) 100%
   );
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-
+  transition: border 0.1s ease-in;
   border-radius: 1rem;
+}
+.button-section a:hover {
+  color: var(--blue-izis);
+  background: linear-gradient(
+    to top,
+    rgba(17, 12, 30, 1) 0%,
+    rgba(15, 76, 129, 1) 100%
+  );
+  border: 4px solid var(--blue-izis);
 }
