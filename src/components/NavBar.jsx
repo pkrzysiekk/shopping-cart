@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useCart } from "./CartProvider";
 
 export function NavBar() {
+  const { cart, addToCart } = useCart();
   return (
     <div className="nav-bar">
       <div className="nav-bar-container">

@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import NavBar from "./NavBar";
 import Card from "./Card";
+import { useCart } from "./CartProvider";
 
 function ShopPage() {
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     const fetchProducts = async () => {
       fetch("https://fakestoreapi.com/products?limit=8")

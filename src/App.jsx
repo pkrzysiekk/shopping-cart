@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import NavBar from "./components/NavBar";
 import { Link } from "react-router-dom";
+import { CartProvider, useCart } from "./components/CartProvider";
 
 function App() {
   return (
