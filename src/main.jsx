@@ -10,6 +10,7 @@ import "./index.css";
 import App from "./App.jsx";
 import ShopPage from "./components/ShopPage.jsx";
 import { CartProvider } from "./components/CartProvider.jsx";
+import CartPage from "./components/CartPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/shop",
     element: <ShopPage />,
+  },
+  {
+    path: "/cart",
+    element: <CartPage />,
   },
 ]);
 createRoot(document.getElementById("root")).render(
