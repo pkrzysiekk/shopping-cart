@@ -159,7 +159,6 @@ main {
   display: flex;
   justify-content: center;
   gap: 0.2rem;
-  padding-top: 1rem;
 }
 
 .buttons button {
@@ -194,4 +193,13 @@ main {
 }
 .buttons input {
   text-align: center;
+}
+.cart-item {
+  display: flex;
+  align-content: center;
+  gap: 1rem;
+}
+
+.cart-item .buttons {
+  align-self: center;
 }
