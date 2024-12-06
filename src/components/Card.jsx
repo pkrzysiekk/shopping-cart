@@ -1,7 +1,10 @@
 import { useContext, useEffect, useState } from "react";
+import { useCart } from "./CartProvider";
 
 function Card({ product }) {
   const [quantity, setQuantity] = useState(0);
+
+  const { cart, addToCart } = useCart();
 
   function handleInputChange(e) {
     const newValue = parseInt(e.target.value, 10);
@@ -48,7 +51,9 @@ function Card({ product }) {
           </button>
         </div>
         <div className="add-container">
-          <button className="add">Add</button>
+          <button className="add" onClick={() => addToCart(product, quantity)}>
+            Add
+          </button>
         </div>
       </div>
     </div>
