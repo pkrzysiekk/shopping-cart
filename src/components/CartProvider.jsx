@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { productInCart } from "../helperFunctions/productInCart";
-import { getProductToEdit } from "../helperFunctions/getProductToEdit";
+import { getEditedCart } from "../helperFunctions/getEditedCart";
 
 const CartContext = createContext(null);
 
@@ -10,8 +10,8 @@ const CartProvider = ({ children }) => {
   const addToCart = (product, quantity) => {
     if (quantity > 0) {
       if (productInCart(cart, product)) {
-        const productToEdit = getProductToEdit(cart, product);
-        console.log(productToEdit);
+        const editedCart = getEditedCart(cart, product, quantity);
+        setCart(editedCart);
       } else {
         const productToAdd = { product, quantity: quantity };
         setCart([...cart, productToAdd]);
