@@ -18,7 +18,10 @@ function CartPage() {
             cart.map((item) => (
               <div className="cart-item" key={item.product.id}>
                 <div className="cart-item-name">
-                  <p>{item.product.title}</p>
+                  <p className="product-title">{item.product.title}</p>
+                  <p className="product-price">
+                    {item.product.price * item.quantity} $
+                  </p>
                 </div>
                 <div className="buttons">
                   <button className="minus-button">-</button>
@@ -28,10 +31,12 @@ function CartPage() {
                     value={item.quantity}
                   />
                   <button className="plus-button">+</button>
+                  <button className="remove-button">X</button>
                 </div>
               </div>
             ))
           )}
+          <button className="order-button">Submit Order</button>
         </div>
       </main>
     </>
