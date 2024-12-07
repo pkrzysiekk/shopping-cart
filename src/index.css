@@ -205,8 +205,14 @@ main {
 .cart-container {
   display: grid;
   border-radius: 1rem;
+  row-gap: 1rem;
   justify-content: center;
-  background-color: antiquewhite;
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+
   min-width: 500px;
   min-height: fit-content;
 }

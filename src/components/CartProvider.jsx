@@ -18,11 +18,36 @@ const CartProvider = ({ children }) => {
       }
     }
   };
+
+  const incrementProduct = (product) => {
+    const editedCart = getEditedCart(cart, product, 1);
+    setCart(editedCart);
+  };
+  const decrementProduct = (product, quantity) => {
+    if (quantity != 1) {
+      const editedCart = getEditedCart(cart, product, -1);
+      setCart(editedCart);
+    } else {
+      removeProduct(product);
+    }
+  };
+  const removeProduct = (product) => {
+    const newCart = cart.filter((item) => item.product.id != product.id);
+    setCart(newCart);
+  };
   useEffect(() => {
     console.log(cart);
   }, [cart]);
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addToCart,
+        incrementProduct,
+        decrementProduct,
+        removeProduct,
+      }}
+    >
       {children}
     </CartContext.Provider>
   );

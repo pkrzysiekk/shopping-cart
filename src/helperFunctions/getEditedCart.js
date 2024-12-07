@@ -1,11 +1,12 @@
-export function getEditedCart(cart, product, quantity) {
-  let productToEdit = cart.find((item) => {
-    return item.product.id == product.id;
-  });
-  let indexToEdit = cart.indexOf(productToEdit);
-  productToEdit.quantity += quantity;
-  cart[indexToEdit] = productToEdit;
-  const newCart = [...cart];
-  console.log(newCart);
+export function getEditedCart(cart, product, quantityToAdd) {
+  const productToEdit = cart.find((item) => item.product.id === product.id);
+  console.log(productToEdit);
+  const updatedProduct = {
+    ...productToEdit,
+    quantity: productToEdit.quantity + quantityToAdd,
+  };
+  const newCart = cart.map((item) =>
+    item.product.id === product.id ? updatedProduct : item
+  );
   return newCart;
 }
