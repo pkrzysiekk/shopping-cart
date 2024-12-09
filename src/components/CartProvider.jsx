@@ -35,6 +35,9 @@ const CartProvider = ({ children }) => {
     const newCart = cart.filter((item) => item.product.id != product.id);
     setCart(newCart);
   };
+  const removeCart = () => {
+    setCart([]);
+  };
   useEffect(() => {
     console.log(cart);
   }, [cart]);
@@ -46,6 +49,7 @@ const CartProvider = ({ children }) => {
         incrementProduct,
         decrementProduct,
         removeProduct,
+        removeCart,
       }}
     >
       {children}
