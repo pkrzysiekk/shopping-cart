@@ -6,12 +6,14 @@ import { useCart } from "./CartProvider";
 
 function ShopPage() {
   const [products, setProducts] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
       fetch("https://fakestoreapi.com/products?limit=8")
         .then((res) => res.json())
-        .then((json) => setProducts(json));
+        .then((json) => setProducts(json))
+        .then(() => setIsLoaded(true));
     };
     fetchProducts();
   }, []);
@@ -25,9 +27,13 @@ function ShopPage() {
       <main>
         <h1>Our products:</h1>
         <div className="products-container">
-          {products.map((product) => (
-            <Card key={product.id} product={product} />
-          ))}
+          {isLoaded ? (
+            products.map((product) => (
+              <Card key={product.id} product={product} />
+            ))
+          ) : (
+            <p className="loading-element">Loading...</p>
+          )}
         </div>
       </main>
     </>

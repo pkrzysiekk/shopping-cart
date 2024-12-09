@@ -248,3 +248,10 @@ main {
   left: 0;
   transform: none;
 }
+.loading-element {
+  font-size: 4rem;
+  justify-self: end;
+  align-self: center;
+  grid-column: 1/6;
+  grid-row: 1/3;
+}
